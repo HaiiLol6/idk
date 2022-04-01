@@ -1,0 +1,8 @@
+local RunService = game:GetService("RunService")
+local MaxFPS = 1
+while true do
+    local t0 = tick()
+    RunService.Heartbeat:Wait()
+    repeat until (t0 + 1/MaxFPS) < tick()
+wait()
+end
