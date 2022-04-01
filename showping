@@ -1,3 +1,5 @@
+-- Skid... D:
+
 local pingui = Instance.new("ScreenGui")
 local a = Instance.new("Frame")
 local b = Instance.new("TextLabel")
