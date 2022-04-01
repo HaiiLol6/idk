@@ -1,0 +1,36 @@
+local pingui = Instance.new("ScreenGui")
+local a = Instance.new("Frame")
+local b = Instance.new("TextLabel")
+pingui.Name = "pingui"
+pingui.Parent = game.CoreGui
+pingui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+a.Name = "a"
+a.Parent = pingui
+a.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+a.BorderSizePixel = 0
+a.Position = UDim2.new(0.747395873, 0, 0.0858895779, 0)
+a.Size = UDim2.new(0, 143, 0, 39)
+a.Active = true
+a.Draggable = true
+b.Name = "b"
+b.Parent = a
+b.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+b.BackgroundTransparency = 1.000
+b.BorderSizePixel = 0
+b.Position = UDim2.new(5.96046448e-08, 0, -0.0256408155, 0)
+b.Size = UDim2.new(0, 143, 0, 39)
+b.Font = Enum.Font.SourceSans
+b.Text = "ping"
+b.TextColor3 = Color3.fromRGB(255, 255, 255)
+b.TextSize = 28.000
+b.TextWrapped = true
+local function BNVNABR_fake_script() -- b.LocalScript 
+	local script = Instance.new('LocalScript', b)
+
+	if b.Text == "ping" then
+	    while wait() do
+		b.Text = "Ping: " ..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+		end
+	end
+end
+coroutine.wrap(BNVNABR_fake_script)()
