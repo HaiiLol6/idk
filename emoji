@@ -1,0 +1,7 @@
+local stars = {}
+
+local crown = {
+        [3337202737] = true,
+}
+
+local diamond = {}
