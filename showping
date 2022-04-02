@@ -29,7 +29,7 @@ local function BNVNABR_fake_script() -- b.LocalScript
 
 	if b.Text == "ping" then
 	    while wait() do
-		b.Text = "Ping: " ..game:GetService'Stats'.Network.ServerStatsItem'Data Ping':GetValueString()
+		b.Text = "Ping: " ..game:GetService'Stats'.Network.ServerStatsItem['Data Ping']:GetValueString()
 		end
 	end
 end
